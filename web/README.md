@@ -1,5 +1,7 @@
 # Frontend code
 
+> You can preview this app at https://touchapad.now.sh.
+
 We have here an app written with Svelte. It has components. These components are:
 - `App` :: Lays out the page's interface
 - `Arrow` :: Creates an SVG arrow path based on endpoints
