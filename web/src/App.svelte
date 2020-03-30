@@ -87,7 +87,7 @@
     <section class="touchpadsec">
         <div class="touchpad">
             {#each ids as i}
-                <div class="touchbutton { states[i] && states[i].on ? 'on' : ''} { selIdx === i ? 'selected' : ''}" on:click={e => selIdx=i} tabIndex={width < 960 ? 0 : ''} on:keydown={keyDown(_ => selIdx=i)} on:keyup={keyUp(_ => selIdx=i)}>
+                <div class="touchbutton { states[i] && states[i].on ? 'on' : ''} { selIdx === i ? 'selected' : ''}" on:click={e => selIdx=i} tabIndex={width < 960 ? 0 : null} on:keydown={keyDown(_ => selIdx=i)} on:keyup={keyUp(_ => selIdx=i)}>
                     {states[i] ? states[i].name : ''}
                     <svg width="100" height="40" viewBox="0 0 100 40">
                         <rect x="1.5" y="1.5" width="97" height="37" rx="4.5" fill="none" stroke="#9D9D9D" stroke-width="3" stroke-miterlimit="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 13"/>
