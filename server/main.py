@@ -20,7 +20,7 @@ state_schema = {
         'name': { 'type': 'string', 'required': True }
     }
 }
-states_schema = { f'{n:x}': state_schema for n in range(app.config.NUM_BUTTONS) }
+states_schema = { f'{n:X}': state_schema for n in range(app.config.NUM_BUTTONS) }
 
 # Load database of button -> state mappings from filesystem
 try:
@@ -86,7 +86,7 @@ async def serial():
 def update_titles(sw):
     """Update all button titles displayed on the touchscreen."""
     for num in range(app.config.NUM_BUTTONS):
-        sw.write(f'q{num:x}\n'.encode())
+        sw.write(f'q{num:X}\n'.encode())
 
 def update_states(sw):
     """Updates all button states indicated on the touchscreen."""
