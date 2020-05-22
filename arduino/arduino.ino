@@ -190,8 +190,11 @@ void processCommand() {
             Serial.println("eInvalid boolean");
             break;
         }
-        states[title] = (command[2] == 't');
-        autoButton(title);
+        boolean newState = (command[2] == 't');
+        if (states[title] != newState) {
+          states[title] = newState;
+          autoButton(title);
+        }
         break;
     }
     case 't': {
