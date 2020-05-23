@@ -13,6 +13,8 @@ app.config.HA_URL = 'ws://ubuge1:8123/api/websocket'
 app.config.STATES_FILE = 'state.json'
 app.config.NUM_BUTTONS = 12
 app.config.DOMAINS = ['light', 'automation', 'media_player', 'climate', 'switch']
+# Schema describing the configuration of each button
+# When sending POST requests, the uploaded JSON must match by this schema
 state_schema = {
     'type': 'dict',
     'schema': {
